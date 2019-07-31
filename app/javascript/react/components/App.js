@@ -1,7 +1,19 @@
 import React from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import TeamIndexContainer from '../containers/TeamIndexContainer'
+
 
 export const App = (props) => {
-  return (<h1>Make It So React</h1>)
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/teams" component={TeamIndexContainer}/>
+      </Switch>
+    </BrowserRouter>
+
+
+
+  )
 }
 
 export default App
