@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
      has_many :memberships
      has_many :users, through: :memberships
+     has_many :terms
+     has_many :terms, through: :matches
 
 
   def admin?

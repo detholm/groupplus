@@ -1,5 +1,5 @@
 import React, {Component } from "react";
-import TeamIndex from '../components/TeamIndex'
+import TeamTile from '../components/TeamTile'
 
 class TeamIndexContainer extends Component {
   constructor(props) {
@@ -33,7 +33,7 @@ class TeamIndexContainer extends Component {
     let teamTiles = this.state.teams.map(team => {
 
       return(
-        <TeamIndex
+        <TeamTile
           key={team.id}
           id={team.id}
           name={team.name}

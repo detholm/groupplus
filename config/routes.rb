@@ -9,8 +9,9 @@ Rails.application.routes.draw do
 
 
   namespace :api do
-      namespace :v1 do
-        resources :teams, only: [:index, :show]
-      end
+    namespace :v1 do
+      resources :teams, only: [:index, :show]
+      resources :terms
     end
+  end
 end
