@@ -31,20 +31,20 @@ class TeamIndexContainer extends Component {
 
     render() {
     let teamTiles = this.state.teams.map(team => {
-
       return(
         <TeamTile
           key={team.id}
           id={team.id}
           name={team.name}
           description={team.description}
+
          />
     )
     })
     return (
-      <div>
-      <h3> TEAMTILES </h3>
-        {teamTiles}
+      <div className="jsxContainer">
+      <h3> TEAMIndex </h3>
+         {teamTiles}
       </div>
     );
   }

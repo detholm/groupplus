@@ -6,7 +6,7 @@ const TeamTile = props => {
   let name = props.name
 
   return(
-    <h3>
+    <h3 className="jsxYellow">
     <Link to={`/teams/${props.id}`}> {name} </Link>
     </h3>
   )

@@ -8,7 +8,7 @@ export const App = (props) => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/teams" component={TeamIndexContainer}/>
+        <Route exact path="/" component={TeamIndexContainer}/>
         <Route exact path="/teams/:id" component={TeamShowContainer}/>
 
       </Switch>

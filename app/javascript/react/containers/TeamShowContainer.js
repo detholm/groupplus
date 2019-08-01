@@ -1,4 +1,5 @@
 import React, {Component } from "react";
+import TeamTile from "../components/TeamTile"
 
 class TeamShowContainer extends Component {
   constructor(props) {
@@ -8,9 +9,9 @@ class TeamShowContainer extends Component {
     }
   }
   render() {
-
     return(
-      <h1> heelo </h1>
+
+      <h1 className="jsxContainer"> heelo </h1>
     )
   }
 }
