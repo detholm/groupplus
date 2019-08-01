@@ -50,9 +50,4 @@ class TeamIndexContainer extends Component {
   }
 }
 
-
-
-
-
-
 export default TeamIndexContainer

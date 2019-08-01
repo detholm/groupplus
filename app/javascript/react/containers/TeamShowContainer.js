@@ -8,10 +8,19 @@ class TeamShowContainer extends Component {
 
     }
   }
+
+    componentDidMount(){
+    let teamID = this.props.match.params.id
+    fetch(`/api/v1/teams/${this.props.match.params.id}`)
+    .then(response => response.json())
+    .then((teamBody) => {
+      this.setState({name: teamBody.name, description: teamBody.description})
+    })
+  }
   render() {
     return(
 
-      <h1 className="jsxContainer"> heelo </h1>
+      <h1 className="jsxContainer"> {this.state.name} </h1>
     )
   }
 }
