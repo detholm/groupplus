@@ -1,4 +1,4 @@
-class TermsController < ApplicationController
+class Api::V1::TermsController < ApplicationController
 
 
 
