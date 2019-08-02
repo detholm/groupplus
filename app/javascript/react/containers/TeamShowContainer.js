@@ -16,11 +16,13 @@ class TeamShowContainer extends Component {
     .then((teamBody) => {
       this.setState({name: teamBody.name, description: teamBody.description})
     })
+    //fetch(`/api/v1/users/$`)
   }
   render() {
-    return(
 
+    return(
       <h1 className="jsxContainer"> {this.state.name} </h1>
+
     )
   }
 }
