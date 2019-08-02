@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :teams, only: [:index, :show]
   resources :users, only: [:show]
-
+  resources :terms, only: [:index, :show]
 
 
 

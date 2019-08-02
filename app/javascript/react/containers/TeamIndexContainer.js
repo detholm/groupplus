@@ -8,7 +8,6 @@ class TeamIndexContainer extends Component {
       teams: []
     };
   }
-
   componentDidMount() {
     fetch('/api/v1/teams')
      .then(response => {

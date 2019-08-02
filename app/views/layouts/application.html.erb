@@ -11,12 +11,14 @@
 </head>
 <body>
 
-  <nav class="top-bar">
-    <ul class="title-area">
-        <h1><a href="/">GroupPlus</a></h1>
-    </ul>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <div class="logo">
+        <%= link_to image_tag("/logo/weblogo.png"), "/" %>
+      </div>
+    </div>
 
-    <section class="top-bar-section">
+    <div class="top-bar-right">
       <ul class="right">
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
@@ -25,8 +27,8 @@
           <li><%= link_to 'Sign In', new_user_session_path %></li>
         <%- end -%>
       </ul>
-    </section>
-  </nav>
+    </div>
+  </div>
 
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
