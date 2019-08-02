@@ -10,7 +10,7 @@ export const App = (props) => {
       <Switch>
         <Route exact path="/" component={TeamIndexContainer}/>
         <Route exact path="/teams/:id" component={TeamShowContainer}/>
-
+        
       </Switch>
     </BrowserRouter>
 

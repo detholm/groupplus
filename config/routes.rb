@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
   resources :teams, only: [:index, :show]
-
   resources :users, only: [:show]
 
 

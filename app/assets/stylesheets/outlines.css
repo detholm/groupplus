@@ -2,11 +2,15 @@
   border-style: solid;
   border-color: red;
 }
-.jsxContainer {
+.jsxblue {
   border-style: solid;
   border-color: blue;
 }
 .jsxYellow{
   border-style: solid;
   border-color: yellow;
+}
+.jsxPurple{
+  border-style: solid;
+  border-color: pink;
 }

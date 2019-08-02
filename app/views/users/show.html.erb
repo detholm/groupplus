@@ -3,7 +3,9 @@
 <div>
   <% if user_signed_in? %>
 
-    <div><%= current_user.first_name %> <%= current_user.last_name %> <%= current_user.memberships.inspect %></div>
+    <div><%= current_user.first_name %> <%= current_user.last_name %>
+      
+     <%= current_user.memberships.inspect %></div>
   <% end %>
 
 </div>
