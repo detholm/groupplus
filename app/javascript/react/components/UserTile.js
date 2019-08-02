@@ -10,6 +10,8 @@ console.log(props)
     <h3 className="jsxYellow">
       Name: {props.user.first_name} {props.user.last_name}
     </h3>
+    // Creat a form component and render here 
+    // Pass terms as props
     </div>
   )
 }

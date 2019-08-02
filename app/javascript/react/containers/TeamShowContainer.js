@@ -1,4 +1,4 @@
-import React, {Component } from "react";
+import React, { Component } from "react";
 import TeamTile from "../components/TeamTile"
 import UserTile from '../components/UserTile'
 
@@ -6,7 +6,8 @@ class TeamShowContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: []
+      users: [],
+      terms: []
     }
   }
 
@@ -16,28 +17,32 @@ class TeamShowContainer extends Component {
     .then(response => response.json())
     .then((teamBody) => {
 
-      this.setState({name: teamBody.team.name, description: teamBody.description, users: teamBody.users})
+      this.setState({
+        name: teamBody.team.name,
+        description: teamBody.description,
+        users: teamBody.users,
+        terms: teamBody.terms
+      })
     })
   }
   render() {
-
+    
     let userTiles = this.state.users.map(user => {
       return(
         <UserTile
         key={user.id}
         user={user}
-
         />
       )
     })
 
     return(
       <div>
-      <h1 className="jsxblue">
-      {this.state.name}</h1>
-      <div>
-      {userTiles}
-      </div>
+        <h1 className="jsxblue"> {this.state.name}</h1>
+          <div>
+          {userTiles}
+          </div>
+        <p className="brown">  {this.state.terms.term}  </p>
       </div>
     );
   }
