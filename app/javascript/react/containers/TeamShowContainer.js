@@ -33,7 +33,7 @@ class TeamShowContainer extends Component {
 
     return(
       <div>
-      <h1 className="jsxblue"> WHAT
+      <h1 className="jsxblue">
       {this.state.name}</h1>
       <div>
       {userTiles}
