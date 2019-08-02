@@ -6,6 +6,7 @@ class Api::V1::TeamsController < ApplicationController
 
   def show
     team = Team.find(params[:id])
-    render json: team
+    users = team.users
+    render json: {team: team, users: users}
   end
 end
