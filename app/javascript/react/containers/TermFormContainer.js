@@ -1,11 +1,10 @@
 import React, { Component } from "react"
-// Look at foundation forms  to make them cool
-
+import TermFormTiles from '../components/TermFormTiles'
 
 class TermFormContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {value: '', terms: this.props.terms };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,19 +15,34 @@ class TermFormContainer extends Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    alert('Succesful Submit');
     event.preventDefault();
   }
 
   render() {
+    // map over terms that are in state
+    // for each term, create a <div> containing a <label> and an <input>
+    // save all that as some var, then use {some var} in the return to display
+    // will also need to pass each one handleChange
+
+  let termFormTiles = this.props.terms.map(term =>{
+
+    return(
+
+        <TermFormTiles
+        key={term.id}
+        term={term.term}
+        />
+    )
+  })
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="checkbox" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
+    <div className="termsForm">
+      <form >
+        {termFormTiles}
+        <input type="submit" />
       </form>
+    </div>
+
     );
   }
 }

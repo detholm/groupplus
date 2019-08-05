@@ -23,9 +23,11 @@ class TeamShowContainer extends Component {
         description: teamBody.description,
         users: teamBody.users,
         terms: teamBody.terms
+
       })
     })
   }
+
   render() {
     let userTiles = this.state.users.map(user => {
       return(
@@ -37,12 +39,11 @@ class TeamShowContainer extends Component {
       )
     })
 
-
     return(
       <div className="jsxblue">
-        <h1 > {this.state.name}</h1>
+        <h1>{this.state.name}</h1>
           <div>
-          {userTiles}
+            {userTiles}
           </div>
       </div>
     );
