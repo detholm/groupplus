@@ -21,7 +21,6 @@ class TeamIndexContainer extends Component {
      })
      .then(response => response.json())
      .then(body => {
-
       this.setState({teams: body});
 
      })
@@ -41,10 +40,15 @@ class TeamIndexContainer extends Component {
     )
     })
     return (
-      <div className="jsxContainer">
-      <h3> TEAMIndex </h3>
-         {teamTiles}
+      <div className="team-wrapper">
+
+          <ul>
+          <h3> Team Index </h3>
+            {teamTiles}
+          </ul>
       </div>
+
+
     );
   }
 }

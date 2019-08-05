@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom'
 const TeamTile = props => {
 
   let name = props.name
-
   return(
-    <h3 className="jsxPurple">
+    <h2 className="teamtile callout">
     <Link to={`/teams/${props.id}`}> {name} </Link>
-    </h3>
+    </h2>
   )
 }
 
