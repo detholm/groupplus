@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 import TeamTile from "../components/TeamTile"
 import UserTile from '../components/UserTile'
+import TermFormContainer from '../containers/TermFormContainer'
 
 class TeamShowContainer extends Component {
   constructor(props) {
@@ -26,23 +27,23 @@ class TeamShowContainer extends Component {
     })
   }
   render() {
-    
     let userTiles = this.state.users.map(user => {
       return(
         <UserTile
         key={user.id}
         user={user}
+        terms={this.state.terms}
         />
       )
     })
 
+
     return(
-      <div>
-        <h1 className="jsxblue"> {this.state.name}</h1>
+      <div className="jsxblue">
+        <h1 > {this.state.name}</h1>
           <div>
           {userTiles}
           </div>
-        <p className="brown">  {this.state.terms.term}  </p>
       </div>
     );
   }
