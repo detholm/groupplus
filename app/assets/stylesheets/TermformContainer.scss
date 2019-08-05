@@ -1,4 +1,9 @@
 .termsForm {
   margin: 1rem;
-column-count: 3;
+  column-count: 3;
+  column-width: auto;
+
+}
+.termTile {
+  font-size: medium;
 }
