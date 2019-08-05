@@ -5,7 +5,6 @@ import TermFormContainer from '../containers/TermFormContainer'
 const TermTile = props => {
  console.log(props)
 
-
   return(
     <div>
     <p className="brown">

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 import TeamTile from "../components/TeamTile"
 import UserTile from '../components/UserTile'
 import TermFormContainer from '../containers/TermFormContainer'
