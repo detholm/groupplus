@@ -36,3 +36,13 @@ Term.create!(term: "Humble")
 Term.create!(term: "Good Manners")
 Term.create!(term: "Ethical")
 Term.create!(term: "Sense of Humor")
+
+
+u1 = User.create!(email: "sally@gmail.com", first_name: "Sally", last_name: "Smith", password: "muller12")
+u2 = User.create!(email: "detholm@comcast.net", first_name: "Didrik", last_name: "Etholm", password: "muller12")
+
+t1 = Team.create!(name: "Team One")
+t2 = Team.create!(name: "Team Two")
+
+m1 = Membership.create!(user: u1, team: t1)
+m2 = Membership.create!(user:u2, team: t1)

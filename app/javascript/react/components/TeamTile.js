@@ -11,5 +11,4 @@ const TeamTile = props => {
   )
 }
 
-
 export default TeamTile

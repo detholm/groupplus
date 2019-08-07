@@ -5,9 +5,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
      has_many :memberships
-     has_many :users, through: :memberships
-     has_many :terms
+     has_many :teams, through: :memberships
+     has_many :matches, foreign_key: :to_user_id
      has_many :terms, through: :matches
+
+
+  def count_terms
+    terms.group('id').count
+  end
 
 
   def admin?
