@@ -10,7 +10,7 @@ const UserTile = props => {
         {props.user.first_name} {props.user.last_name}
       </h5>
       <div className="jsxPurple">
-        <TermFormContainer terms={props.terms}/>
+        <TermFormContainer terms={props.terms} user={props.user}/>
       </div>
     </div>
   )

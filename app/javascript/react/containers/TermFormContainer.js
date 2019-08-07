@@ -4,43 +4,69 @@ import TermFormTiles from '../components/TermFormTiles'
 class TermFormContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: '', terms: this.props.terms };
+    this.state = {
+      selectedTerms: [],
+      terms: this.props.terms,
+      user: this.props.user
+    };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+     this.handleSaveClick = this.handleSaveClick.bind(this);
+     this.termTileSelected = this.termTileSelected.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  handleSaveClick(event) {
+    const userId = this.state.user.id
+    const matches = this.state.selectedTerms.map( (termId) => {
+      return {to_user: userId, term: termId}
+    })
+    // this.state.user.id
+
+    
+    fetch('/api/v1/matches', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        matches: matches
+      })
+    }).then(res=>res.json())
+      .then(res => console.log(res));
   }
 
-  handleSubmit(event) {
-    alert('Succesful Submit');
-    event.preventDefault();
+  termTileSelected(termId) {
+    const selected = this.state.selectedTerms
+    selected.push(termId)
+
+    this.setState({selectedTerms: selected})
   }
 
   render() {
-    // map over terms that are in state
-    // for each term, create a <div> containing a <label> and an <input>
+
     // save all that as some var, then use {some var} in the return to display
     // will also need to pass each one handleChange
 
   let termFormTiles = this.props.terms.map(term =>{
 
     return(
-
         <TermFormTiles
         key={term.id}
-        term={term.term}
+        term={term}
+        onSelected={this.termTileSelected}
         />
     )
   })
     return (
     <div className="termsForm">
+
       <form >
+
         {termFormTiles}
-        <input type="submit" />
+      <input onClick={this.handleSaveClick}
+        type="button" value="Save" />
       </form>
+
     </div>
 
     );

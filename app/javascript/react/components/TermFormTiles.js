@@ -3,13 +3,16 @@ import React from 'react'
 const TermFormTiles = props => {
 
   return(
-  <div >
-    <label className="termTile">
-    <input type="checkbox" value="props.term" ref={this.input} />
-      {props.term}
-    </label>
+  <div>
+    <label htmlFor={props.term.term}>{props.term.term}</label>
+    <input
+      id={props.term.term}
+      name={props.term.term}
+      type="checkbox"
+      onChange={() => props.onSelected(props.term.id)} />
   </div>
 
   )
 }
 export default TermFormTiles
+ // className="termTile"
