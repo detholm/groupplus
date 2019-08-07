@@ -1,10 +1,15 @@
+
+
+<div id="app">
+ </div>
+
 <h2> User Profile </h2>
 
 <div>
   <% if user_signed_in? %>
 
     <div><%= current_user.first_name %> <%= current_user.last_name %>
-      
+
      <%= current_user.memberships.inspect %></div>
   <% end %>
 
