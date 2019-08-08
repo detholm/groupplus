@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :matches
       resources :stats, only: [:show]
       #get 'stats', to: 'stats#show'
+      resources :users
     end
   end
 

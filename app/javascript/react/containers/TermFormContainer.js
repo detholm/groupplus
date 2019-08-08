@@ -21,7 +21,7 @@ class TermFormContainer extends Component {
     })
     // this.state.user.id
 
-    
+
     fetch('/api/v1/matches', {
       method: 'post',
       headers: {
@@ -38,14 +38,9 @@ class TermFormContainer extends Component {
   termTileSelected(termId) {
     const selected = this.state.selectedTerms
     selected.push(termId)
-
     this.setState({selectedTerms: selected})
   }
-
   render() {
-
-    // save all that as some var, then use {some var} in the return to display
-    // will also need to pass each one handleChange
 
   let termFormTiles = this.props.terms.map(term =>{
 
@@ -61,10 +56,9 @@ class TermFormContainer extends Component {
     <div className="termsForm">
 
       <form >
-
         {termFormTiles}
-      <input onClick={this.handleSaveClick}
-        type="button" value="Save" />
+        <input onClick={this.handleSaveClick}
+        type="button" value="Save"/>
       </form>
 
     </div>
