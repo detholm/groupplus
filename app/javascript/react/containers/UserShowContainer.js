@@ -15,8 +15,6 @@ class UserShowContainer extends Component {
   componentDidMount(){
   let userID = this.props.match.params.id
 
-// debugger
-
 
   fetch(`/api/v1/users/${this.props.match.params.id}`)
   .then(response => response.json())
@@ -25,12 +23,9 @@ class UserShowContainer extends Component {
 }
 
   render(){
-
-
-debugger
   return(
     <div>
-    {this.state.user.first_name}
+    <h1 className="jsxblue">{this.state.user.first_name}</h1>
 
     </div>
 
