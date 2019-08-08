@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 // import PieChart from '../components/PieChart'
-import { Chart } from 'react-google-charts';
+// import { Chart } from 'react-google-charts';
 class UserShowContainer extends Component {
   constructor(props) {
     super(props);
@@ -21,30 +21,12 @@ class UserShowContainer extends Component {
 
   render(){
 
-
+debugger
   return(
-<div className="jsxblue">
-        <Chart
-          chartType="PieChart"
-          width="100%"
-          height="400px"
-          data={[
-            ['Task', 'Hours per Day'],
-            ['Work', 11],
-            ['Eat', 2],
-            ['Commute', 2],
-            ['Watch TV', 2],
-            ['Sleep', 7],
-          ]}
-          options={{
-            title: 'My Daily Activities',
-          }}
-          graph_id="PieChart"
-        />
+    <div>
+    {this.state.user.first_name}
 
-
-</div>
-
+    </div>
     )
   }
 }
