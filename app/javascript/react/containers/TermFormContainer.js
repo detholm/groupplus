@@ -48,6 +48,7 @@ class TermFormContainer extends Component {
         <TermFormTiles
         key={term.id}
         term={term}
+        user={this.state.user}
         onSelected={this.termTileSelected}
         />
     )
