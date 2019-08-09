@@ -28,6 +28,7 @@ class TeamIndexContainer extends Component {
   }
 
     render() {
+
     let teamTiles = this.state.teams.map(team => {
       return(
         <TeamTile
@@ -46,6 +47,7 @@ class TeamIndexContainer extends Component {
           <h3> Team Index </h3>
             {teamTiles}
           </ul>
+
       </div>
 
 

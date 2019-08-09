@@ -3,3 +3,9 @@
   grid-template-columns: 10rem auto;
   margin: 1rem;
 }
+.usershow {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  margin: 2rem;
+}
