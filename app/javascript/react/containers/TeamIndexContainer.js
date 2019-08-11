@@ -21,13 +21,24 @@ class TeamIndexContainer extends Component {
      })
      .then(response => response.json())
      .then(body => {
-      this.setState({teams: body});
+      this.setState({teams: body.teams, current_user: body.user});
 
      })
      .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
 
-    render() {
+
+
+    render(){
+
+    let current_user = ""
+    if (this.state.current_user == undefined)  {
+      current_user = ""
+    } else {
+      (current_user = this.state.current_user)
+    }
+    // if unfinded {this.state.current_user} wait for mount
+
 
     let teamTiles = this.state.teams.map(team => {
       return(
@@ -41,11 +52,14 @@ class TeamIndexContainer extends Component {
     )
     })
     return (
-      <div className="team-wrapper">
+
+      <div>
 
           <ul>
-          <h3> Team Index </h3>
+          <h2 className="title callout">{current_user.first_name} {current_user.last_name}'s  Teams</h2>
+          <div className="team-wrapper">
             {teamTiles}
+            </div>
           </ul>
 
       </div>

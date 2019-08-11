@@ -12,7 +12,7 @@ class UserShowContainer extends Component {
     }
 
   }
-  
+
   componentDidMount(){
   let userID = this.props.match.params.id
 
@@ -25,16 +25,16 @@ class UserShowContainer extends Component {
 
   render(){
 
-    var output = [["Term", "count"]]
+    let output = [["Term", "count"]]
     const uniqueTerms = new Set();
     this.state.terms.forEach(function(element){
       uniqueTerms.add(element.term);
     });
 
   let uniqueValueArray = Array.from(uniqueTerms);
-    for(var i =0; i < uniqueValueArray.length; i++){
+    for(let i =0; i < uniqueValueArray.length; i++){
       let count = 0;
-      for(var j =0; j< this.state.terms.length;j++){
+      for(let j =0; j< this.state.terms.length;j++){
       if(uniqueValueArray[i] === this.state.terms[j].term){
         count++;
         }
@@ -46,11 +46,10 @@ class UserShowContainer extends Component {
 
   return(
     <div>
-    <h1 className="jsxblue">{this.state.user.first_name}</h1>
+    <h1 className="userTitle ">{this.state.user.first_name} {this.state.user.last_name}</h1>
     <Chart
           chartType="PieChart"
           data={output}
-
           graph_id="PieChart"
           width={"100%"}
           height={"800px"}
