@@ -6,9 +6,9 @@ const UserTile = props => {
   return(
 
     <div className="jsxYellow userTileWrapper">
-      <h5>
+      <h4>
         {props.user.first_name} {props.user.last_name}
-      </h5>
+      </h4>
       <div className="jsxPurple">
         <TermFormContainer terms={props.terms} user={props.user}/>
       </div>
