@@ -62,6 +62,7 @@ m6 = Membership.create!(user:u6, team: t1)
 m7 = Membership.create!(user:u7, team: t1)
 m8 = Membership.create!(user:u8, team: t1)
 m9 = Membership.create!(user:u9, team: t1)
+m10 = Membership.create!(user:u10, team: t1)
 
 
 Match.create!(from_user_id: 1, to_user_id: 10, term_id: 3)
