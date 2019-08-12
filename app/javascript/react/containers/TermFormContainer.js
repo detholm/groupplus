@@ -54,7 +54,7 @@ class TermFormContainer extends Component {
     )
   })
     return (
-    <div className="termsForm">
+    <div className="termsForm callout">
 
       <form >
         {termFormTiles}

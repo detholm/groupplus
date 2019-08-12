@@ -5,7 +5,7 @@ const TeamTile = props => {
 
   let name = props.name
   return(
-    <h2 className="testbutton">
+    <h2 className="teamButton callout">
     <Link to={`/teams/${props.id}`}> {name} </Link>
     </h2>
   )

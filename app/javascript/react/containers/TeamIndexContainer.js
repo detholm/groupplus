@@ -54,14 +54,15 @@ class TeamIndexContainer extends Component {
 
     return (
       <div>
-        <div className="linkUser">
-          <Link to={{pathname: `/users/${current_user.id}`}}>View Your Results</Link>
-        </div>
+      <div className="userButton">
+        <Link to={{pathname: `/users/${current_user.id}`}}>{current_user.first_name}'s Page</Link>
+      </div>
+      <div>
           <ul>
-            <h2 className="title callout">{current_user.first_name} {current_user.last_name}'s  Teams</h2>
+            <h2 className="title ">{current_user.first_name} {current_user.last_name}'s  Teams</h2>
             <div className="team-wrapper">{teamTiles}</div>
           </ul>
-
+        </div>
       </div>
 
 

@@ -5,11 +5,11 @@ import TermFormContainer from '../containers/TermFormContainer'
 const UserTile = props => {
   return(
 
-    <div className="jsxYellow userTileWrapper">
-      <h4>
+    <div>
+      <h4 className="formName">
         {props.user.first_name} {props.user.last_name}
       </h4>
-      <div className="jsxPurple">
+      <div>
         <TermFormContainer terms={props.terms} user={props.user}/>
       </div>
     </div>
