@@ -1,5 +1,6 @@
 import React, {Component } from "react";
 import TeamTile from '../components/TeamTile'
+import {Link} from 'react-router-dom';
 
 class TeamIndexContainer extends Component {
   constructor(props) {
@@ -39,7 +40,6 @@ class TeamIndexContainer extends Component {
     }
     // if unfinded {this.state.current_user} wait for mount
 
-
     let teamTiles = this.state.teams.map(team => {
       return(
         <TeamTile
@@ -47,19 +47,19 @@ class TeamIndexContainer extends Component {
           id={team.id}
           name={team.name}
           description={team.description}
-
          />
     )
     })
+
+
     return (
-
       <div>
-
+        <div className="linkUser">
+          <Link to={{pathname: `/users/${current_user.id}`}}>View Your Results</Link>
+        </div>
           <ul>
-          <h2 className="title callout">{current_user.first_name} {current_user.last_name}'s  Teams</h2>
-          <div className="team-wrapper">
-            {teamTiles}
-            </div>
+            <h2 className="title callout">{current_user.first_name} {current_user.last_name}'s  Teams</h2>
+            <div className="team-wrapper">{teamTiles}</div>
           </ul>
 
       </div>
